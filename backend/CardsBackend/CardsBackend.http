@@ -1,0 +1,6 @@
+@CardsBackend_HostAddress = http://localhost:5023
+
+GET {{CardsBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

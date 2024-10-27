@@ -14,7 +14,6 @@ export default defineNuxtConfig({
     modules: ["@primevue/nuxt-module", "@nuxt/fonts"],
     primevue: {
         options: {
-            components: { prefix: "PV-" },
             theme: {
                 preset: definePreset(Aura, {
                     semantic: {
@@ -33,7 +32,6 @@ export default defineNuxtConfig({
                         },
                     },
                 }),
-                // preset: Aura,
             },
         },
     },

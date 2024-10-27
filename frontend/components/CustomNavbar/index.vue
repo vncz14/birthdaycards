@@ -5,10 +5,10 @@
         border: 0,
     }">
         <template #start>
-            <NavbarLogo />
+            <CustomNavbarLogo />
         </template>
         <template #end>
-            
+            <CustomAvatar />
         </template>
     </Menubar>
 </template>
@@ -17,9 +17,7 @@
 import { PrimeIcons } from '@primevue/core/api';
 
 const items = ref([
-    {
-        
-    },
+
 ]);
 </script>
 

@@ -1,7 +1,7 @@
 <template>
     <div>
         <Avatar v-if="loggedIn" label="T" shape="circle" @click="toggleMenu" :style="{cursor: 'pointer'}"/>
-        <NuxtLink v-else to="/login">
+        <NuxtLink v-else to="/api/login">
             <Button label="Login with Google" icon="pi pi-user" />
         </NuxtLink>
         <Menu ref="menu" id="overlay_menu" :model="items" :popup="true" />

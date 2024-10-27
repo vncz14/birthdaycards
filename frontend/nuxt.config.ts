@@ -11,7 +11,7 @@ export default defineNuxtConfig({
         defaults: { weights: [400, 700], styles: ["normal", "italic"] },
         families: [{ name: "Pretendard", provider: "local" }],
     },
-    modules: ["@primevue/nuxt-module", "@nuxt/fonts"],
+    modules: ["@nuxt/fonts", "@primevue/nuxt-module", "nuxt-auth-utils"],
     primevue: {
         options: {
             theme: {
@@ -34,5 +34,11 @@ export default defineNuxtConfig({
                 }),
             },
         },
+    },
+    runtimeConfig: {
+        NUXT_SESSION_PASSWORD: process.env.NUXT_SESSION_PASSWORD,
+        NUXT_OAUTH_GOOGLE_CLIENT_ID: process.env.NUXT_OAUTH_GOOGLE_CLIENT_ID,
+        NUXT_OAUTH_GOOGLE_CLIENT_SECRET:
+            process.env.NUXT_OAUTH_GOOGLE_CLIENT_SECRET,
     },
 });

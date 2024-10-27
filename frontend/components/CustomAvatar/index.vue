@@ -1,11 +1,16 @@
 <template>
     <div>
-        <Avatar label="T" shape="circle" @click="toggleMenu" :style="{cursor: 'pointer'}"/>
+        <Avatar v-if="loggedIn" label="T" shape="circle" @click="toggleMenu" :style="{cursor: 'pointer'}"/>
+        <NuxtLink v-else to="/login">
+            <Button label="Login with Google" icon="pi pi-user" />
+        </NuxtLink>
         <Menu ref="menu" id="overlay_menu" :model="items" :popup="true" />
     </div>
 </template>
 
 <script setup lang="ts">
+const { loggedIn } = useUserSession();
+
 const menu = ref();
 
 const items = ref([
